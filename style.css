@@ -37,3 +37,19 @@ body {
 .clock .number9 { --rotation: 270deg;}
 .clock .number10 { --rotation: 300deg;}
 .clock .number11 { --rotation: 330deg;}
+
+/*defining the clock hand*/
+.clock .hand {
+  --rotatiion: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom; /*for being rotated arround the bottom not the center*/
+  z-index: 10;
+  transform: translateX(-50%) rotate(var(--rotation));/*for hand to be centered inside the 12*/
+
+}
