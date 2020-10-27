@@ -4,7 +4,7 @@
 }
 
 body {
-  background: linear-gradient(to right, hsl(200,100%,50%), hsl(175,100%,50%));;
+  background: linear-gradient(to right, hsl(200,100%,50%), hsl(175,100%,50%));
 }
 
 .clock { /*draw the circle*/
@@ -13,15 +13,27 @@ body {
   background-color: rgba(255,255,255, .8);
   border-radius: 50%;
   border: 2px solid black;
-  text-align: relative;
+  position: relative;
 }
 /*position the numbers and the clock*/
 .clock .number {
-  --rotation:0 /*set the variable by default*/
+  --rotation:0; /*set the variable by default*/
   position: absolute;
   width: 100%;
   height: 100%;
   text-align: center; /* for number 12 to be centered*/
   transform: rotate(var(--rotation)); /* for other numbers to be rotated*/
-
+  font-size: 1.5rem;
 }
+/*rotate the numbers in the clock*/
+.clock .number1 { --rotation: 30deg;}
+.clock .number2 { --rotation: 60deg;}
+.clock .number3 { --rotation: 90deg;}
+.clock .number4 { --rotation: 120deg;}
+.clock .number5 { --rotation: 150deg;}
+.clock .number6 { --rotation: 180deg;}
+.clock .number7 { --rotation: 210deg;}
+.clock .number8 { --rotation: 240deg;}
+.clock .number9 { --rotation: 270deg;}
+.clock .number10 { --rotation: 300deg;}
+.clock .number11 { --rotation: 330deg;}
