@@ -1,10 +1,15 @@
 *, *::after, *::before {
   box-sizing: border-box;
-  font-family: "Gotham Rounded" sans-serif;
+  font-family: "Gotham Rounded", sans-serif;
 }
 
 body {
   background: linear-gradient(to right, hsl(200,100%,50%), hsl(175,100%,50%));
+  display: flex;
+  justify-content: center;
+  align-items: center; /*move the clock to the center*/
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .clock { /*draw the circle*/
@@ -53,7 +58,19 @@ body {
   transform: translateX(-50%) rotate(var(--rotation));/*for hand to be centered inside the 12*/
 
 }
-
+/*draw a black circle*/
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
 .clock .hand.second {
   width: 3px;
   height: 45%;
